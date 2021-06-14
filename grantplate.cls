@@ -40,7 +40,7 @@
 \renewcommand{\headrulewidth}{0pt}
 
 % Override cite command to get supercite
-\renewcommand{\cite}{\supercite}
+%\renewcommand{\cite}{\supercite}
 
 \setlength\tabcolsep{2pt}
 

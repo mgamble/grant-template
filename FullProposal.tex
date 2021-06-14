@@ -1,7 +1,6 @@
 \documentclass{grantplate}
 \usepackage{multicol, caption}
 \setlength{\columnsep}{0.5cm}
-%\usepackage{ragged2e}
 %\usepackage{wrapfig}
 
 \newenvironment{Figure}
@@ -9,10 +8,8 @@
   {\endminipage\par\medskip}
 
 \usepackage{lipsum}
-
-\makeglossaries
-
-\addbibresource{Library.bib}
+\addbibresource{My Collection.bib}
+%\makeglossaries
 
 \input{Acronyms}
 
@@ -36,11 +33,13 @@
 \end{multicols}
 %%%%% SUPPORTING DOCUMENTATION %%%%%%%
 
-\clearpage
-\section*{Glossary}
-\printglossaries
+% \clearpage
+% \section*{Glossary}
+% \printglossaries
 
 \clearpage
+
+% \bibliographystyle{ieeetr} %causes an error WTF
 \printbibliography
 
 \end{document}
