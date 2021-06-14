@@ -1,4 +1,12 @@
 \documentclass{grantplate}
+\usepackage{multicol, caption}
+\setlength{\columnsep}{0.5cm}
+%\usepackage{ragged2e}
+%\usepackage{wrapfig}
+
+\newenvironment{Figure}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
 
 \usepackage{lipsum}
 
@@ -13,9 +21,9 @@
 \include{Resubmission}
 \cleardoublepage
 
-\input{SpecificAims}
+\include{SpecificAims}
 \cleardoublepage
-
+\begin{multicols}{2}
 \input{Significance}
 \input{Innovation}
 
@@ -25,6 +33,7 @@
 \input{Aim2}
 \input{Aim3}
 
+\end{multicols}
 %%%%% SUPPORTING DOCUMENTATION %%%%%%%
 
 \clearpage
