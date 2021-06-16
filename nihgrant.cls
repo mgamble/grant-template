@@ -1,10 +1,10 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{grantplate}[2017/01/14 Aaron's grant class]
+\ProvidesClass{nihgrant}[2021/0/14 addapted from https://github.com/aarmey/grant-template]
 
 \PassOptionsToClass{11pt}{article}
 \LoadClassWithOptions{article}
 
-\RequirePackage{enumitem, wrapfig, array, adjustbox, color, setspace, textgreek, fancyhdr, microtype}
+\RequirePackage{enumitem, wrapfig, array, adjustbox, color, setspace, textgreek, fancyhdr, microtype, multicol, caption}
 
 % Change bar for change marks
 \RequirePackage[pdftex, leftbars, xcolor]{changebar}
@@ -27,8 +27,8 @@
 
 \renewcommand\familydefault{\sfdefault} 
 
-% Basic bibliography settings
-\RequirePackage[backend=biber,url=false,sortcites=true,sorting=none,style=numeric-comp,maxbibnames=99]{biblatex}
+% Basic bibliography settings % old = numeric-comp
+\RequirePackage[backend=biber,url=false,sortcites=true,sorting=none,style=nature,maxbibnames=99]{biblatex}
 \setlength\bibitemsep{0pt}
 
 % Changebar settings
@@ -40,8 +40,21 @@
 \renewcommand{\headrulewidth}{0pt}
 
 % Override cite command to get supercite
-%\renewcommand{\cite}{\supercite}
+\renewcommand{\cite}{\supercite}
 
 \setlength\tabcolsep{2pt}
 
-\setlength{\columnsep}{5pt}
+%\setlength{\columnsep}{5pt}
+\setlength{\columnsep}{0.5cm}
+
+\newenvironment{Figure}
+  {\par\medskip\noindent\minipage{\linewidth}\centering}
+  {\endminipage\par\medskip}
+
+\DeclareFieldFormat{eprint:pmcid}{%
+  PMCID\addcolon\space
+  \ifhyperref
+    {\href{http://www.ncbi.nlm.nih.gov/pmc/articles/#1}{\nolinkurl{#1}}}
+    {\nolinkurl{#1}}}
+\DeclareFieldAlias{eprint:PMCID}{eprint:pmcid}
+\DeclareFieldAlias{eprint:pmc}{eprint:pmcid}
