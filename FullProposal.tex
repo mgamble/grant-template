@@ -1,8 +1,4 @@
-\input{childdoc.def}
-\childdocmain{}
-
 \documentclass{nihgrant}
-
 
 \usepackage{lipsum}
 \addbibresource{My Collection.bib}
@@ -23,31 +19,30 @@
 \newcommand{\SpecificAimThreeB}{Getting this to happen will really be quite pricey}
 \newcommand{\SpecificAimThreeC}{This task really pulls everything together but will require everything working perfectly}
 
-
 \input{Acronyms}
 
 \begin{document}
-\include{ProjectSummary}
-\include{ProjectNarrative}
-\include{FacilitiesAndOtherResources}
-\include{Equipment}
-\include{BudgetJustification}
-\include{Resubmission}
-%\cleardoublepage
 
-\include{SpecificAims}
-%\cleardoublepage
-
-\include{ResearchStrategy}
-
-%%%%% SUPPORTING DOCUMENTATION %%%%%%%
-
-% \clearpage
-% \section*{Glossary}
-% \printglossaries
-
-\include{Bibliography}
-\include{ResourceSharingPlan}
-\include{Authentication}
+\input{ProjectSummary}
+\clearpage
+\input{ProjectNarrative}
+\clearpage
+\input{FacilitiesAndOtherResources}
+\clearpage
+\input{Equipment}
+\clearpage
+\input{BudgetJustification}
+\clearpage
+\input{Resubmission}
+\clearpage
+\input{SpecificAims}
+\clearpage
+\input{ResearchStrategy}
+\clearpage
+\input{Bibliography}
+\clearpage
+\input{ResourceSharingPlan}
+\clearpage
+\input{Authentication}
 
 \end{document}
