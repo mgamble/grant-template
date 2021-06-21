@@ -4,7 +4,7 @@
 \PassOptionsToClass{11pt}{article}
 \LoadClassWithOptions{article}
 
-\RequirePackage{enumitem, wrapfig, array, adjustbox, color, setspace, textgreek, fancyhdr, microtype, multicol, caption}
+\RequirePackage{enumitem, wrapfig, array, adjustbox, color, setspace, textgreek, fancyhdr, microtype, multicol, caption, csquotes}
 
 % Change bar for change marks
 \RequirePackage[pdftex, leftbars, xcolor]{changebar}
