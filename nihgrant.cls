@@ -2,7 +2,8 @@
 \ProvidesClass{nihgrant}[2021/0/14 addapted from https://github.com/aarmey/grant-template]
 
 \PassOptionsToClass{11pt}{article}
-\LoadClassWithOptions{article}
+%\LoadClassWithOptions{article} %doesn't modify font right
+\LoadClass{article} %this works
 
 \RequirePackage{enumitem, wrapfig, array, adjustbox, color, setspace, textgreek, fancyhdr, microtype, multicol, caption, csquotes}
 
